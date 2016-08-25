@@ -6,3 +6,7 @@
 .empty-metricset {
   display: none;
 }
+
+.empty-metricset + .metricset {
+  border: none;
+}
