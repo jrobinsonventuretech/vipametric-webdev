@@ -1,0 +1,12 @@
+@import "../../config/themes/_standard";
+@import "../../config/_base-import";
+
+@import "../_definitions/_page--engagement-edit";
+
+.empty-metricset {
+  display: none;
+}
+
+.empty-metricset + .metricset {
+  border: none;
+}

@@ -26,7 +26,9 @@ gulp.task('styles:build', ['styles:clean'], function() {
 		.pipe(gulp.dest('./web/build/stylesheets'));
 });
 gulp.task('styles:clean', function(callback) {
-	del(['./web/build/stylesheets/'], callback);
+	del(['./web/build/stylesheets/']).then(function(data){
+		callback();
+	});
 });
 
 gulp.task('javascript', ['javascript:build']);
@@ -41,7 +43,9 @@ gulp.task('javascript:build', ['javascript:clean'], function() {
 		.pipe(gulp.dest('./web/build/javascript'));
 });
 gulp.task('javascript:clean', function(callback) {
-	del(['./web/build/javascript'], callback);
+	del(['./web/build/javascript']).then(function(data){
+		callback();
+	});
 });
 
 gulp.task('design', ['design:build']);
@@ -50,7 +54,9 @@ gulp.task('design:build', ['design:clean'], function() {
 		.pipe(gulp.dest('./web/build/design'));
 });
 gulp.task('design:clean', function(callback) {
-	del(['./web/build/design'], callback);
+	del(['./web/build/design']).then(function(data){
+		callback();
+	});
 });
 
 gulp.task('iconfont', function(){
