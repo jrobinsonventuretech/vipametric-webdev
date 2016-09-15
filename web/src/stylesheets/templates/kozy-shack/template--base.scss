@@ -1,0 +1,79 @@
+//General Styles
+#e-wrapper {
+  display: flex;
+  justify-content: center;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+//Form Styles
+.form_entry {
+  .question {
+    margin-bottom: 10px;
+    color: #000;
+    .user-entry-required {
+      .label:before {
+        content: "*";
+        color: #D8000C;
+      }
+    }
+  }
+  .email_field .label {
+    display: block;
+  }
+  .submit_button {
+    border: 0;
+    background-color: #ab132a;
+    color: #fff;
+    padding: 5px;
+    &:hover {
+      cursor: pointer;
+      background-color: #df5c04;
+    }
+  }
+  .message-container {
+    color: #D8000C;
+    background-color: #FFBABA;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    &.empty {
+      display: none;
+    }
+    .error {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+//Mobile Styles
+@media only screen and (min-width: 320px) and (max-width: 667px) {
+  #e-wrapper {
+    justify-content: flex-start;
+  }
+  .text img {
+    width: 100%;
+    height: auto;
+  }
+  .form_entry {
+    .question {
+      margin-bottom: 20px;
+      .email_field input {
+        width: 200px;
+      }
+    }
+  }
+}
+
+//Thank you Styles
+.text .button {
+  background-color: #ab132a;
+  color: #fff;
+  padding: 5px;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    background-color: #df5c04;
+  }
+}
