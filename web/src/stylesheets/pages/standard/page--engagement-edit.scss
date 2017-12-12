@@ -49,3 +49,69 @@ a[title="Take Survey"] {
     }
 }
 
+.sub-section {
+    .metric:not(.numeric-metric), .activity-duration, .activity-name, .activity-planned-duration {
+        padding: 10px;
+        border: 1px solid $color-grey-e2;
+        .metric-label, > label {
+            display: inline-block;
+            position: absolute;
+            margin-top: -20px;
+            background: #fff;
+            padding: 0 5px;
+        }
+        + .metric:not(.numeric-metric) {
+            margin-top: 30px;
+        }
+        .ctb, .rtb {
+            display: block;
+            padding: 2.5px 10px;
+        }
+    }
+    .activity-duration, .activity-name, .activity-planned-duration {
+        padding-top: 15px;
+        > label {
+            margin-top: -25px;
+        }
+    }
+}
+
+.vertical-value-component {
+    border: 1px solid $color-grey-e2;
+    > .metric-bucket-item-container {
+        padding: 10px;
+        &:nth-child(even) {
+            background: $color-grey-f2;
+        }
+        > .metric-bucket-item-label {
+            display: inline-block;
+            width: 110px;
+            word-wrap: break-word;
+            border-right: 1px solid $color-grey-cc;
+        }
+        > .metric-container {
+            display: inline-block;
+            width: auto;
+            margin: 0 0 0 15px;
+        }
+        &:last-of-type {
+            > .metric-container {
+                margin: 0;
+                label {
+                    margin: 0;
+                    display: inline-block;
+                    width: 110px;
+                    word-wrap: break-word;
+                    border-right: 1px solid $color-grey-cc;
+                }
+                .value-component {
+                    display: inline-block;
+                    margin: 0 0 0 15px;
+                }
+                .percent-total {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
