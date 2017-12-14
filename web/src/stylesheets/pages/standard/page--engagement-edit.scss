@@ -50,6 +50,9 @@ a[title="Take Survey"] {
 }
 
 .sub-section {
+    .activity-name {
+        display: none;
+    }
     .metric-group-container {
         .metric-label {
             width: auto;
