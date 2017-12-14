@@ -50,6 +50,11 @@ a[title="Take Survey"] {
 }
 
 .sub-section {
+    .metric-group-container {
+        .metric-label {
+            width: auto;
+        }
+    }
     .metric:not(.numeric-metric), .activity-duration, .activity-name, .activity-planned-duration {
         padding: 10px;
         border: 1px solid $color-grey-e2;
@@ -66,6 +71,11 @@ a[title="Take Survey"] {
         .ctb, .rtb {
             display: block;
             padding: 2.5px 10px;
+        }
+        .choice-metric {
+            .vertical-value-component {
+                border: none;
+            }
         }
     }
     .activity-duration, .activity-name, .activity-planned-duration {

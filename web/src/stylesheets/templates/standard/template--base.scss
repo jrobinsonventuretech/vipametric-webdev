@@ -3,6 +3,49 @@
 
 @import "../_definitions/_template--base";
 
+.btn {
+    display: block;
+    text-align: center;
+    @include breakpoint($bp-mobile-landscape) {
+        display: inline-block;
+    }
+}
+
+.freemarker.add-engagement a {
+    margin-bottom: 15px;
+    @include breakpoint($bp-mobile-landscape) {
+        margin-bottom: 0;
+    }
+}
+
+.search {
+    .constraints {
+        select, input {
+            width: 220px !important;
+            max-width: 100% !important;
+        }
+        .range-selector {
+            .constraint-operator {
+                @include breakpoint($bp-mobile-landscape) {
+                    margin-right: 0;
+                }
+            }
+            .constraint-input {
+                @include breakpoint($bp-mobile-landscape) {
+                    margin-left: 25px;
+                }
+                button {
+                    margin-left: -36px;
+                }
+            }
+        }
+    }
+}
+
+textarea, .select2-container {
+    max-width: 100%;
+}
+
 .nav-plus {
     .logout {
         .btn.logout-url {
